@@ -17,7 +17,7 @@ ARG VERSION=dev
 ARG REVISION=dev
 ARG BUILDTIME
 
-RUN apk add --no-cache git build-base tzdata
+RUN apk add --no-cache git build-base tzdata python3 py3-pip
 
 ENV SERVICE=autobrr
 
