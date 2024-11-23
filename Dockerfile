@@ -17,7 +17,7 @@ ARG VERSION=dev
 ARG REVISION=dev
 ARG BUILDTIME
 
-RUN apk add --no-cache git build-base tzdata python3 py3-pip
+RUN apk add --no-cache git build-base tzdata
 
 ENV SERVICE=autobrr
 
@@ -45,7 +45,7 @@ ENV HOME="/config" \
     XDG_CONFIG_HOME="/config" \
     XDG_DATA_HOME="/config"
 
-RUN apk --no-cache add ca-certificates curl tzdata jq
+RUN apk --no-cache add ca-certificates curl tzdata jq python3 py3-pip
 
 WORKDIR /app
 
